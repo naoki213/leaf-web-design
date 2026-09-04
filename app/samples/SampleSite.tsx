@@ -1,0 +1,9 @@
+'use client';
+import {useEffect} from 'react';
+import './sample.css';
+const content={
+ lume:{name:'LUMÉ',label:'HAIR SALON',hero:'/sample-lume.png',copy:'髪を整えると、\n気持ちも少し整う。',sub:'日々の扱いやすさまで考える、小さなヘアサロン。',tone:'lume'},
+ kasane:{name:'KASANE',label:'季節の和菓子',hero:'/sample-craft.png',copy:'季節を、\nひとつずつ重ねる。',sub:'日本の四季を、小さな和菓子に映して。',tone:'kasane'},
+ atelier:{name:'ATELIER',label:'空間と道具',hero:'/leaf-studio.png',copy:'手で考え、\n場所をつくる。',sub:'素材の性格を読みながら、長く使える空間を。',tone:'atelier'}
+};
+export default function SampleSite({type}:{type:keyof typeof content}){const c=content[type];useEffect(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('on')),{threshold:.2});document.querySelectorAll('.sample-reveal').forEach(x=>io.observe(x));return()=>io.disconnect()},[]);return <main className={'demo '+c.tone}><header><b>{c.name}</b><nav>私たちについて　　メニュー　　アクセス</nav><span>MENU</span></header><section className="demo-hero"><img src={c.hero} alt=""/><div><small>{c.label}</small><h1>{c.copy.split('\n').map((x,i)=><span key={x}>{x}{i===0&&<br/>}</span>)}</h1><p>{c.sub}</p></div><i>SCROLL</i></section><section className="demo-intro sample-reveal"><span>01</span><h2>いつもの時間を、<br/>少しだけ心地よく。</h2><p>目に見える美しさだけでなく、その先の日常まで考えること。小さな違いを丁寧に重ねます。</p></section><section className="demo-image sample-reveal"><img src={type==='lume'?'/leaf-hero.png':'/sample-craft.png'} alt=""/><p>丁寧につくる。<br/>長く付き合う。</p></section><section className="demo-menu sample-reveal"><small>02 / OUR STANDARD</small><h2>余白の中に、<br/>らしさを残す。</h2><div><span>01</span><b>自然な仕上がり</b><p>毎日の中で無理なく続けられることを大切に。</p></div><div><span>02</span><b>素材を選ぶ</b><p>触れたとき、使ったときの感覚まで確かめます。</p></div><div><span>03</span><b>対話から始める</b><p>先に答えを決めず、話を聞くところから。</p></div></section><footer><h2>{c.name}</h2><p>PORTFOLIO DEMO SITE</p></footer></main>}
