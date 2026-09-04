@@ -1,6 +1,7 @@
 'use client';
 import {useEffect,useState} from 'react';
 import './phone.css';
+import './iphone.css';
 const samples=[
  {name:'KASANE',kind:'和菓子ブランド',src:'https://naoki213.github.io/kasane-wagashi/',note:'四季を、ひとつずつ重ねる。季節をめぐるブランド体験。'},
  {name:'nue',kind:'インナーウェア',src:'https://naoki213.github.io/nue-innerwear/',note:'今日の私に、ちょうどいい。自然体の日常を伝えるサイト。'},
