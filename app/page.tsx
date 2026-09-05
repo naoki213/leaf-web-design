@@ -3,6 +3,7 @@ import {useEffect,useState} from 'react';
 import './phone.css';
 import './iphone.css';
 import './fit.css';
+import './refine.css';
 const samples=[
  {name:'KASANE',kind:'和菓子ブランド',src:'https://naoki213.github.io/kasane-wagashi/',note:'四季を、ひとつずつ重ねる。季節をめぐるブランド体験。'},
  {name:'nue',kind:'インナーウェア',src:'https://naoki213.github.io/nue-innerwear/',note:'今日の私に、ちょうどいい。自然体の日常を伝えるサイト。'},
@@ -17,7 +18,7 @@ export default function Home(){
   <div className="page-progress" style={{width:progress+'%'}}/>
   <header className="new-header"><a className="brand" href="#top"><img src="./leaf-logo.svg" alt="LEAF"/></a><nav><a href="#works">制作例</a><a href="#service">できること</a><a href="#price">料金</a><a href="#faq">FAQ</a></nav><a className="header-cta" href="#contact">制作を相談する</a></header>
   <section className="phone-hero" id="top">
-   <div className="phone-hero-copy"><p className="kicker">LEAF WEB DESIGN / TOKYO</p><h1>ホームページを、<br/><i>もっと気軽に。</i></h1><div><p>つくれるものを、まず見てください。<br/>4つの制作サイトをスマホでご覧いただけます。</p><span>横にスワイプして見る　→</span></div></div>
+   <div className="phone-hero-copy"><p className="kicker">LEAF WEB DESIGN / TOKYO</p><div className="hero-message"><p className="hero-offer">無料でWebサイトを制作します。</p><h1><span>あなたの仕事が伝わる、</span><i>ホームページを。</i></h1><ul className="hero-points"><li>制作料 0円</li><li>10〜20ページ対応</li><li>公開後 月額2,000円</li></ul></div><div className="hero-guide"><p>まずは、LEAFがつくれるものをご覧ください。4つの公開サイトをスマートフォンで体験できます。</p><span>横にスワイプして見る　→</span></div></div>
    <div className="phone-rail" id="works">{[...samples,...samples].map((s,i)=><a className={'phone-card phone-'+(i%4)} href={s.src} target="_blank" rel="noreferrer" key={s.name+i} aria-label={s.name+'のサイトを開く'}><div className="phone-speaker"/><div className="phone-screen"><iframe src={s.src} title="" loading={i<4?'eager':'lazy'} tabIndex={-1}/><span>サイトを見る ↗</span></div><div className="phone-meta"><small>0{(i%4)+1} / {s.kind}</small><strong>{s.name}</strong></div></a>)}</div>
    <div className="phone-hero-note"><span>制作例 04</span><p>すべて実際に公開しているサイトです。<br/>スマートフォンをタップすると各サイトへ移動します。</p></div>
   </section>

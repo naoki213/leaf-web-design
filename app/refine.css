@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+body{font-family:"Noto Sans JP","Yu Gothic",sans-serif;font-weight:300}
+h1,h2,h3,.price-table strong,.phone-meta strong{font-family:"Noto Serif JP","Yu Mincho",serif}
+.phone-hero-copy{grid-template-columns:.5fr 1.75fr .75fr;align-items:start}
+.hero-message{min-width:0}
+.hero-offer{margin:0 0 24px;font:500 clamp(18px,1.7vw,27px)/1.5 "Noto Sans JP",sans-serif;color:var(--green);letter-spacing:.03em}
+.phone-hero-copy .hero-message h1{font-size:clamp(52px,6.5vw,104px);line-height:1.08;letter-spacing:-.055em}
+.phone-hero-copy .hero-message h1 span,.phone-hero-copy .hero-message h1 i{display:block}
+.hero-points{display:flex;flex-wrap:wrap;gap:9px;margin:32px 0 0;padding:0;list-style:none}
+.hero-points li{padding:9px 13px;border:1px solid rgba(18,32,24,.35);font-size:11px;letter-spacing:.04em}
+.hero-guide{padding-top:52px}
+.hero-guide p{margin:0}
+
+@media(max-width:800px){
+ .phone-hero{padding-top:100px}
+ .phone-hero-copy{padding:0 20px 38px}
+ .phone-hero-copy .kicker{margin-bottom:30px}
+ .hero-offer{margin-bottom:16px;font-size:17px}
+ .phone-hero-copy .hero-message h1{font-size:clamp(36px,10.7vw,46px);line-height:1.22;letter-spacing:-.045em;margin:0}
+ .phone-hero-copy .hero-message h1 span,.phone-hero-copy .hero-message h1 i{white-space:nowrap}
+ .hero-points{gap:7px;margin-top:25px}
+ .hero-points li{padding:7px 9px;font-size:10px}
+ .hero-guide{padding-top:28px}
+ .hero-guide p{max-width:32em;line-height:1.9;word-break:normal;overflow-wrap:anywhere}
+ .intro h2,.why h2,.service h2,.new-faq h2,.new-cta h2{font-size:clamp(35px,10vw,48px);line-height:1.35;letter-spacing:-.035em;word-break:keep-all;overflow-wrap:anywhere}
+ .intro>p,.why p,.service p,.new-faq p,.phone-hero-note p{word-break:normal;overflow-wrap:anywhere}
+ .price-title h2{font-size:clamp(56px,18vw,72px);white-space:nowrap}
+}
+
+@media(max-width:370px){
+ .phone-hero-copy .hero-message h1{font-size:34px}
+ .hero-points li{font-size:9px}
+}
