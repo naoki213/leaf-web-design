@@ -11,6 +11,8 @@ h1,h2,h3,.price-table strong,.phone-meta strong{font-family:"Noto Serif JP","Yu 
 .hero-points li{padding:9px 13px;border:1px solid rgba(18,32,24,.35);font-size:11px;letter-spacing:.04em}
 .hero-guide{padding-top:52px}
 .hero-guide p{margin:0}
+.price-title h2 small{font:400 clamp(12px,1.2vw,18px)/1 "Noto Sans JP",sans-serif;letter-spacing:0;margin-left:10px;white-space:nowrap}
+.cost-note{margin:24px 0 0;text-align:right;font-size:11px;color:#667168}
 
 @media(max-width:800px){
  .phone-hero{padding-top:100px}
@@ -23,12 +25,19 @@ h1,h2,h3,.price-table strong,.phone-meta strong{font-family:"Noto Serif JP","Yu 
  .hero-points li{padding:7px 9px;font-size:10px}
  .hero-guide{padding-top:28px}
  .hero-guide p{max-width:32em;line-height:1.9;word-break:normal;overflow-wrap:anywhere}
- .intro h2,.why h2,.service h2,.new-faq h2,.new-cta h2{font-size:clamp(35px,10vw,48px);line-height:1.35;letter-spacing:-.035em;word-break:keep-all;overflow-wrap:anywhere}
+ .intro h2,.new-faq h2,.new-cta h2{font-size:clamp(35px,10vw,48px);line-height:1.35;letter-spacing:-.035em;word-break:keep-all;overflow-wrap:anywhere}
+ .why,.service-head{grid-template-columns:28px minmax(0,1fr);gap:14px}
+ .why h2{font-size:clamp(34px,9.4vw,41px);line-height:1.45;letter-spacing:-.045em;word-break:keep-all}
+ .service h2{font-size:clamp(33px,9vw,40px);line-height:1.45;letter-spacing:-.045em;word-break:keep-all}
  .intro>p,.why p,.service p,.new-faq p,.phone-hero-note p{word-break:normal;overflow-wrap:anywhere}
- .price-title h2{font-size:clamp(56px,18vw,72px);white-space:nowrap}
+ .price-title h2{font-size:clamp(52px,16vw,68px);white-space:nowrap}
+ .price-title h2 small{display:block;margin:12px 0 0;text-align:right}
+ .cost-note{text-align:left;line-height:1.8}
 }
 
 @media(max-width:370px){
  .phone-hero-copy .hero-message h1{font-size:34px}
  .hero-points li{font-size:9px}
+ .why h2{font-size:32px}
+ .service h2{font-size:31px}
 }
