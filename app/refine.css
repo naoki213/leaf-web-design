@@ -36,6 +36,36 @@ h1,h2,h3,.price-table strong,.phone-meta strong{font-family:"Noto Serif JP","Yu 
  .cost-note{text-align:left;line-height:1.8}
 }
 
+/* Photo-led top page */
+.image-hero{position:relative;min-height:780px;margin-top:80px;overflow:hidden;background:#f7f6f1}
+.image-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.image-hero-copy{position:relative;z-index:2;width:min(650px,48vw);padding:105px 0 90px 6vw}
+.image-hero-copy>p{font-size:13px;line-height:2;margin:0 0 35px}
+.image-hero-copy h1{font:500 clamp(46px,4.5vw,72px)/1.38 "Noto Serif JP",serif;letter-spacing:-.045em;margin:0;color:#14231a}
+.hero-rates{display:flex;align-items:center;gap:25px;margin:48px 0 30px}
+.hero-rates p{display:flex;align-items:baseline;margin:0;white-space:nowrap}.hero-rates small{font-size:12px;margin-right:9px}.hero-rates b{font:400 clamp(46px,4.6vw,72px)/1 "Noto Serif JP",serif;letter-spacing:-.06em}.hero-rates em{font-style:normal;font-size:11px;margin-right:5px}.hero-rates span{font-size:14px;margin-left:3px}.hero-rates i{width:1px;height:35px;background:#9ba49d}
+.image-hero-copy>a,.vision-banner a{display:flex;width:220px;justify-content:space-between;padding:17px 20px;background:#14251c;color:white;font-size:12px}.image-hero-copy>a+small{display:block;margin-top:12px;font-size:10px}
+.image-hero-scroll{position:absolute;z-index:2;left:25px;bottom:60px;font:8px ui-monospace,monospace;letter-spacing:.18em;writing-mode:vertical-rl}
+.image-hero-scroll:after{content:"";display:block;width:1px;height:42px;background:#14231a;margin:12px auto 0}
+.phone-hero{min-height:0;padding:125px 0 110px;background:#f8f7f2}
+.works-heading{display:grid;grid-template-columns:.7fr 1.4fr .8fr;gap:5vw;align-items:end;padding:0 6vw 80px}
+.works-heading>p{margin:0;align-self:start}.works-heading h2{margin:0;font:500 clamp(40px,4.7vw,68px)/1.35 "Noto Serif JP",serif;letter-spacing:-.05em}.works-heading>div p{font-size:12px;line-height:2}.works-heading>div span{display:block;margin-top:28px;font:10px ui-monospace,monospace}
+.vision-banner{position:relative;height:520px;overflow:hidden}.vision-banner>img{width:100%;height:100%;object-fit:cover}.vision-banner>div{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding-left:8vw}.vision-banner p{font-size:12px;margin:0 0 18px}.vision-banner h2{font:500 clamp(38px,4.8vw,70px)/1.4 "Noto Serif JP",serif;letter-spacing:-.05em;margin:0 0 42px}.vision-banner a{width:200px}
+
+@media(max-width:800px){
+ .image-hero{margin-top:68px;min-height:760px;background:#f7f6f1}
+ .image-hero>img{height:52%;top:auto;object-position:63% center}
+ .image-hero-copy{width:auto;padding:68px 20px 350px}
+ .image-hero-copy>p{font-size:11px;margin-bottom:24px}
+ .image-hero-copy h1{font-size:clamp(27px,7.2vw,32px);line-height:1.55;letter-spacing:-.045em;white-space:nowrap}
+ .hero-rates{gap:14px;margin:30px 0 23px}.hero-rates small{font-size:10px;margin-right:5px}.hero-rates b{font-size:clamp(38px,11vw,48px)}.hero-rates em{font-size:9px}.hero-rates span{font-size:11px}.hero-rates i{height:27px}.image-hero-copy>a{width:205px;padding:15px 17px}.image-hero-scroll{display:none}
+ .phone-hero{padding:105px 0 85px}
+ .works-heading{display:block;padding:0 20px 55px}.works-heading>p{margin-bottom:42px}.works-heading h2{font-size:clamp(30px,8.5vw,38px);line-height:1.5;white-space:nowrap}.works-heading>div{margin-top:34px}.works-heading>div p{max-width:30em}.works-heading>div span{margin-top:20px}
+ .vision-banner{height:520px}.vision-banner>img{object-position:66% center}.vision-banner>div{justify-content:flex-end;padding:0 20px 60px;background:rgba(237,245,248,.58)}.vision-banner h2{font-size:clamp(29px,8vw,36px);line-height:1.5;white-space:nowrap;margin-bottom:34px}.vision-banner a{width:190px}
+}
+
+@media(max-width:370px){.image-hero-copy h1{font-size:26px}.works-heading h2{font-size:29px}.vision-banner h2{font-size:28px}.hero-rates{gap:9px}}
+
 @media(max-width:370px){
  .phone-hero-copy .hero-message h1{font-size:34px}
  .hero-points li{font-size:9px}
