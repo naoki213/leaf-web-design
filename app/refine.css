@@ -41,3 +41,82 @@ h1,h2,h3,.price-table strong,.phone-meta strong{font-family:"Noto Serif JP","Yu 
  .hero-points li{font-size:9px}
  .why h2,.service h2{font-size:27px}
 }
+
+/* Editorial refinement */
+.new-site{background:#f6f4ee}
+.sec-no{font:400 10px/1.4 ui-monospace,monospace;letter-spacing:.08em}
+.hero-points{border-top:1px solid rgba(18,32,24,.35);border-bottom:1px solid rgba(18,32,24,.35);gap:0}
+.hero-points li{border:0;padding:14px 24px 14px 0;margin-right:24px;font-size:10px}
+.hero-points b{font:500 15px/1 "Noto Serif JP",serif;margin-right:5px}
+.phone-card{box-shadow:0 22px 44px rgba(18,32,24,.16)}
+.phone-card:hover{box-shadow:0 28px 52px rgba(18,32,24,.2)}
+.intro{border-bottom:1px solid var(--line)}
+.why{border-bottom:1px solid var(--line)}
+.new-price{background:#ece9df;padding:150px 6vw 130px}
+.price-heading{display:grid;grid-template-columns:80px .65fr 1.6fr;gap:5vw;align-items:start}
+.price-heading>p{margin:0;font-size:13px}
+.price-heading h2,.flow-heading h2{margin:0;font:500 clamp(48px,6vw,86px)/1.18 "Noto Serif JP",serif;letter-spacing:-.06em}
+.rate-ledger{display:grid;grid-template-columns:1fr 1fr;margin-top:120px;border-top:1px solid #9ba197;border-bottom:1px solid #9ba197}
+.rate{padding:42px 4vw 42px 0;min-width:0}
+.rate+.rate{padding-left:4vw;border-left:1px solid #9ba197}
+.rate small{font-size:12px}
+.rate p{display:flex;align-items:baseline;margin:25px 0 8px;white-space:nowrap}
+.rate b{font:400 clamp(110px,15vw,220px)/.82 "Noto Serif JP",serif;letter-spacing:-.09em}
+.rate em{font-style:normal;font-size:18px;margin:0 8px}
+.rate span{font-size:10px;color:#687068}
+.rate-monthly b{font-size:clamp(74px,10vw,148px)}
+.price-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:0;border-bottom:1px solid #9ba197}
+.price-facts>div{display:grid;grid-template-columns:1fr 1.4fr;padding:28px 2vw 28px 0}
+.price-facts>div+div{padding-left:2vw;border-left:1px solid #9ba197}
+.price-facts dt{font-size:10px;color:#687068}.price-facts dd{margin:0;font-size:13px}
+.service-list article{min-height:0;padding:32px 0;transition:padding .35s ease}
+.service-list article:hover{padding-left:8px}
+.service-list h3{font-family:"Noto Serif JP",serif}
+.mosaic{border-bottom:1px solid var(--line)}
+.flow{padding:160px 6vw 180px;background:#f6f4ee}
+.flow-heading{display:grid;grid-template-columns:80px .65fr 1.6fr;gap:5vw;align-items:start;margin-bottom:100px}
+.flow-heading>p{margin:0;font-size:13px}
+.flow ol{list-style:none;margin:0 0 0 28%;padding:0;border-top:1px solid var(--line)}
+.flow li{display:grid;grid-template-columns:70px 1fr;padding:25px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.flow li span{font:10px ui-monospace,monospace;color:#697269}
+.flow li strong{font:400 24px "Noto Serif JP",serif}
+.new-cta{text-align:left;padding:150px 8vw;background:var(--green)}
+.new-cta>p{font-family:"Noto Sans JP",sans-serif;letter-spacing:.03em}
+.new-cta h2{max-width:1050px;margin:45px 0 70px;font-size:clamp(58px,8vw,116px);line-height:1.16;letter-spacing:-.065em}
+.new-cta a{margin:0;max-width:520px;border:1px solid var(--ink);background:var(--ink)}
+.new-cta small{max-width:650px;line-height:1.8}
+.new-faq summary b{font-weight:300}
+.reveal{transform:translateY(20px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1)}
+
+@media(max-width:800px){
+ .hero-points{display:grid;grid-template-columns:1fr 1fr;margin-top:28px}
+ .hero-points li{margin:0;padding:12px 8px 12px 0;border-bottom:1px solid rgba(18,32,24,.2)}
+ .hero-points li:last-child{grid-column:1/-1;border-bottom:0}
+ .phone-card{box-shadow:0 18px 32px rgba(18,32,24,.15)}
+ .intro{padding-top:120px;padding-bottom:140px}
+ .why{padding-top:120px;padding-bottom:135px}
+ .new-price{padding:110px 20px 100px}
+ .price-heading,.flow-heading{display:grid;grid-template-columns:30px 1fr;gap:12px}
+ .price-heading>p,.flow-heading>p{margin:0}
+ .price-heading h2,.flow-heading h2{grid-column:2;font-size:clamp(35px,10vw,44px);line-height:1.35;letter-spacing:-.045em;margin-top:22px}
+ .rate-ledger{display:block;margin-top:75px}
+ .rate{padding:30px 0 38px}
+ .rate+.rate{padding:38px 0;border-left:0;border-top:1px solid #9ba197}
+ .rate b{font-size:clamp(116px,38vw,154px)}
+ .rate-monthly b{font-size:clamp(66px,21vw,88px)}
+ .rate em{font-size:14px;margin:0 5px}
+ .price-facts{display:block}
+ .price-facts>div,.price-facts>div+div{grid-template-columns:115px 1fr;padding:19px 0;border-left:0;border-top:1px solid #b5b8af}
+ .service{padding-top:115px;padding-bottom:120px}
+ .service-list article:hover{padding-left:0}
+ .mosaic{height:760px}
+ .flow{padding:120px 20px 130px}
+ .flow-heading{margin-bottom:65px}
+ .flow ol{margin-left:36px}
+ .flow li{grid-template-columns:48px 1fr;padding:21px 0}
+ .flow li strong{font-size:20px}
+ .new-faq{padding-top:120px;padding-bottom:130px}
+ .new-cta{padding:115px 20px 105px}
+ .new-cta h2{font-size:clamp(38px,11vw,50px);line-height:1.35;margin:38px 0 55px;word-break:keep-all}
+ .new-cta a{padding:21px 20px}
+}
